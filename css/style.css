@@ -72,6 +72,12 @@ header {
   cursor: pointer;
 }
 
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
 .property-card {
   width: 270px;
   margin: 10px;

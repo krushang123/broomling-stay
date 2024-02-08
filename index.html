@@ -46,23 +46,251 @@
       </div>
     </header>
 
-    <section>
-      <div>
-        <div class="property-card">
-          <div class="card-image"></div>
-
-          <div class="card-content">
-            <div class="location-info">
-              <span class="location-name">New Delhi, India</span>
-              <span class="distance">47 km to Park</span>
-              <span class="booking-info">5 nights 21-26 Mar</span>
-              <span class="price">INR 51,000</span>
-            </div>
-
-            <span class="rating">4.92</span>
-          </div>
-        </div>
-      </div>
+    <section id="propertySection">
+      <div
+        class="property-grid"
+        id="propertyGrid"
+        role="list"
+        aria-labelledby="propertySection"
+      ></div>
     </section>
+
+    <script>
+      const propertyData = [
+        {
+          name: 'Luxury Villa',
+          distance: '10 km to Beach',
+          bookingInfo: '7 nights 15-22 Apr',
+          price: '$2,500',
+          rating: '4.9',
+        },
+        {
+          name: 'City Apartment',
+          distance: '2 km to Downtown',
+          bookingInfo: '3 nights 8-11 May',
+          price: '$800',
+          rating: '4.7',
+        },
+        {
+          name: 'Mountain Cabin',
+          distance: '20 km to Trail',
+          bookingInfo: '4 nights 5-9 Jun',
+          price: '$1,200',
+          rating: '4.8',
+        },
+        {
+          name: 'Seaside Bungalow',
+          distance: '15 km to Coast',
+          bookingInfo: '6 nights 12-18 Jul',
+          price: '$1,800',
+          rating: '4.6',
+        },
+        {
+          name: 'Urban Loft',
+          distance: '5 km to City Center',
+          bookingInfo: '2 nights 20-21 Aug',
+          price: '$600',
+          rating: '4.5',
+        },
+        {
+          name: 'Countryside Retreat',
+          distance: '25 km to Nature Reserve',
+          bookingInfo: '5 nights 1-5 Sep',
+          price: '$2,000',
+          rating: '4.9',
+        },
+        {
+          name: 'Beachfront Paradise',
+          distance: '8 km to Sandy Shore',
+          bookingInfo: '7 nights 10-17 Oct',
+          price: '$3,000',
+          rating: '4.7',
+        },
+        {
+          name: 'Rural Hideaway',
+          distance: '30 km to Vineyard',
+          bookingInfo: '4 nights 15-19 Nov',
+          price: '$1,500',
+          rating: '4.8',
+        },
+        {
+          name: 'Skyline Penthouse',
+          distance: '1 km to City Skyline',
+          bookingInfo: '3 nights 5-8 Dec',
+          price: '$1,000',
+          rating: '4.6',
+        },
+        {
+          name: 'Lakeview Cottage',
+          distance: '12 km to Lakeshore',
+          bookingInfo: '6 nights 18-24 Jan',
+          price: '$1,700',
+          rating: '4.9',
+        },
+        {
+          name: 'Historic Manor',
+          distance: '18 km to Historic Sites',
+          bookingInfo: '5 nights 8-13 Feb',
+          price: '$2,300',
+          rating: '4.7',
+        },
+        {
+          name: 'Ski Chalet',
+          distance: '22 km to Ski Resort',
+          bookingInfo: '4 nights 21-25 Mar',
+          price: '$1,900',
+          rating: '4.8',
+        },
+        {
+          name: 'Desert Oasis',
+          distance: '30 km to Sand Dunes',
+          bookingInfo: '7 nights 12-19 Apr',
+          price: '$2,800',
+          rating: '4.6',
+        },
+        {
+          name: 'Garden Cottage',
+          distance: '5 km to Botanical Garden',
+          bookingInfo: '3 nights 8-11 May',
+          price: '$750',
+          rating: '4.5',
+        },
+        {
+          name: 'Tropical Retreat',
+          distance: '12 km to Rainforest',
+          bookingInfo: '6 nights 15-21 Jun',
+          price: '$2,100',
+          rating: '4.9',
+        },
+        {
+          name: 'Modern Condo',
+          distance: '3 km to Shopping District',
+          bookingInfo: '2 nights 10-12 Jul',
+          price: '$500',
+          rating: '4.7',
+        },
+        {
+          name: 'Riverfront Cabin',
+          distance: '25 km to River',
+          bookingInfo: '5 nights 18-22 Aug',
+          price: '$1,600',
+          rating: '4.8',
+        },
+        {
+          name: 'Eco-Friendly Lodge',
+          distance: '15 km to Eco Park',
+          bookingInfo: '4 nights 5-9 Sep',
+          price: '$1,300',
+          rating: '4.6',
+        },
+        {
+          name: 'Downtown Loft',
+          distance: '1 km to Cultural District',
+          bookingInfo: '7 nights 12-19 Oct',
+          price: '$2,200',
+          rating: '4.9',
+        },
+        {
+          name: 'Serenity Cottage',
+          distance: '10 km to Peaceful Lake',
+          bookingInfo: '6 nights 8-14 Nov',
+          price: '$1,900',
+          rating: '4.7',
+        },
+        {
+          name: 'Hillside Villa',
+          distance: '18 km to Hill Station',
+          bookingInfo: '3 nights 20-23 Dec',
+          price: '$1,100',
+          rating: '4.8',
+        },
+        {
+          name: 'Riverside Retreat',
+          distance: '22 km to Riverside',
+          bookingInfo: '5 nights 5-9 Jan',
+          price: '$1,400',
+          rating: '4.6',
+        },
+        {
+          name: 'Mansion on the Hill',
+          distance: '30 km to Scenic Overlook',
+          bookingInfo: '7 nights 15-22 Feb',
+          price: '$2,800',
+          rating: '4.9',
+        },
+        {
+          name: 'Quaint Cottage',
+          distance: '8 km to Quaint Village',
+          bookingInfo: '4 nights 8-12 Mar',
+          price: '$1,200',
+          rating: '4.7',
+        },
+        {
+          name: 'Golf Course Villa',
+          distance: '12 km to Golf Course',
+          bookingInfo: '6 nights 18-24 Apr',
+          price: '$2,000',
+          rating: '4.8',
+        },
+        {
+          name: 'Sunny Beach House',
+          distance: '5 km to Sunny Beach',
+          bookingInfo: '3 nights 8-11 May',
+          price: '$700',
+          rating: '4.6',
+        },
+        {
+          name: 'Elegant Townhouse',
+          distance: '15 km to Town Center',
+          bookingInfo: '5 nights 15-19 Jun',
+          price: '$1,500',
+          rating: '4.9',
+        },
+        {
+          name: 'Tranquil Cabin',
+          distance: '20 km to Tranquil Lake',
+          bookingInfo: '4 nights 5-9 Jul',
+          price: '$1,100',
+          rating: '4.7',
+        },
+        {
+          name: 'Lakeside Lodge',
+          distance: '25 km to Lakeside',
+          bookingInfo: '7 nights 18-25 Aug',
+          price: '$2,300',
+          rating: '4.8',
+        },
+        {
+          name: 'Skyview Penthouse',
+          distance: '1 km to Skyview Point',
+          bookingInfo: '6 nights 10-16 Sep',
+          price: '$2,500',
+          rating: '4.6',
+        },
+      ];
+
+      const propertyGrid = document.getElementById('propertyGrid');
+
+      propertyData.forEach((property) => {
+        const card = document.createElement('div');
+        card.classList.add('property-card');
+        card.setAttribute('role', 'listitem');
+
+        card.innerHTML = `
+        <div class="card-image"></div>
+        <div class="card-content">
+          <div class="location-info">
+            <span class="location-name">${property.name}</span>
+            <span class="distance">${property.distance}</span>
+            <span class="booking-info">${property.bookingInfo}</span>
+            <span class="price">${property.price}</span>
+          </div>
+          <span class="rating">${property.rating}</span>
+        </div>
+      `;
+
+        propertyGrid.appendChild(card);
+      });
+    </script>
   </body>
 </html>
