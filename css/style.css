@@ -1,0 +1,78 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Utility Classes */
+.container {
+  margin: auto;
+  max-width: 1600px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+header {
+  width: 100vw;
+  border-bottom: 1px solid black;
+}
+
+/* Navbar */
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1600px;
+  height: 80px;
+  margin-inline: auto;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 9999px;
+  padding: 0 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+  margin: 0 14px;
+}
+
+#navbar-text {
+  margin-right: 20px;
+}
+
+#signup-button {
+  background-color: transparent;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
