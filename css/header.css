@@ -1,0 +1,135 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: white;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  margin-inline: auto;
+  padding: 0 20px;
+}
+
+.search-bar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #dddddd;
+  border-radius: 40px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.search-option {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-inline: 8px;
+}
+
+.search-button {
+  background-color: #ff385c;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+  margin: 0 14px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-text {
+  margin-right: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 9999px;
+  display: none;
+}
+
+.navbar-text:hover {
+  background-color: #f7f7f7;
+}
+
+.sign-up-button {
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  padding: 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sign-up-button:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 480px) {
+  .header-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .navbar-text {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .search-bar {
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .header-container {
+    width: 1600px;
+  }
+}
