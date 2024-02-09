@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome tp the Boston Hotel" />
+    <meta name="keywords" content="hotel,boston hotel, new england" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/detail-page.css" />
+    <title>Broomling Stay</title>
+  </head>
+
+  <body>
+    <header role="banner">
+      <div class="header-container">
+        <h1>
+          <a href="index.html" title="Go to Broomling Stay homepage">
+            Broomling Stay
+          </a>
+        </h1>
+
+        <div class="search-bar" role="search">
+          <p class="search-option">Anywhere</p>
+          <div class="divider" role="presentation"></div>
+          <p class="search-option">Any week</p>
+          <div class="divider" role="presentation"></div>
+          <p class="search-option">Add guests</p>
+
+          <div class="search-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 12px;
+                width: 12px;
+                stroke: currentcolor;
+                stroke-width: 5.33333;
+                overflow: visible;
+              "
+            >
+              <path
+                fill="none"
+                d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <nav class="navbar" role="navigation">
+          <div class="navbar-text">Broomling your home</div>
+          <button
+            class="sign-up-button"
+            aria-label="Sign up for Broomling Stay"
+          >
+            Sign up
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section id="propertyDetail">
+      <div class="property-detail-container">
+        <h1 class="property-title">
+          Casa Pinudo Cozy Dual-Bed Room with City-View Deck
+        </h1>
+
+        <div class="grid-container">
+          <div class="grid-item full-height">
+            <img
+              src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Property Images"
+              class="full-width full-height cover-image"
+            />
+          </div>
+
+          <div class="grid-item half-height">
+            <img
+              src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Property Images"
+              class="full-width full-height cover-image"
+            />
+          </div>
+
+          <div class="grid-item half-height">
+            <img
+              src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Property Images"
+              class="full-width full-height cover-image"
+            />
+          </div>
+
+          <div class="grid-item half-height">
+            <img
+              src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Property Images"
+              class="full-width full-height cover-image"
+            />
+          </div>
+
+          <div class="grid-item half-height relative">
+            <img
+              src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Property Images"
+              class="full-width full-height cover-image"
+              onclick="openModal()"
+            />
+
+            <button
+              onclick="openModal()"
+              class="absolute bottom-8 right-8 bg-white"
+            >
+              Show all photos
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
