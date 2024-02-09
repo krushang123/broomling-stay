@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome tp the Boston Hotel" />
+    <meta name="keywords" content="hotel,boston hotel, new england" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/lisiting-page.css" />
+    <title>Broomling Stay</title>
+  </head>
+
+  <body>
+    <header role="banner">
+      <div class="header-container">
+        <h1>
+          <a href="index.html" title="Go to Broomling Stay homepage">
+            Broomling Stay
+          </a>
+        </h1>
+
+        <div class="search-bar" role="search">
+          <p class="search-option">Anywhere</p>
+          <div class="divider" role="presentation"></div>
+          <p class="search-option">Any week</p>
+          <div class="divider" role="presentation"></div>
+          <p class="search-option">Add guests</p>
+
+          <div class="search-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 12px;
+                width: 12px;
+                stroke: currentcolor;
+                stroke-width: 5.33333;
+                overflow: visible;
+              "
+            >
+              <path
+                fill="none"
+                d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <nav class="navbar" role="navigation">
+          <div class="navbar-text">Broomling your home</div>
+          <button
+            class="sign-up-button"
+            aria-label="Sign up for Broomling Stay"
+          >
+            Sign up
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section id="filter">
+      <div class="filters">
+        <div class="filter-options">
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg"
+              alt="Parks"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Parks</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+              alt="Lakefront"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Lakefront</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg"
+              alt="Cities"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Cities</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="	https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg"
+              alt="Castles"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Castles</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg"
+              alt="Countryside"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Countryside</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
+              alt="Golfing"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Golfing</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="	https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg"
+              alt="Mansions"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Mansions</small>
+          </div>
+
+          <div class="filter-item">
+            <img
+              src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg"
+              alt="Play"
+              width="24"
+              height="24"
+            />
+            <small class="filter-label">Play</small>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button class="filter-action-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 16px;
+                width: 16px;
+                stroke: currentcolor;
+                stroke-width: 3;
+                overflow: visible;
+              "
+            >
+              <path
+                fill="none"
+                d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"
+              ></path>
+            </svg>
+            <span class="button-text">Filters</span>
+          </button>
+
+          <button class="filter-action-button" style="margin-left: 10px">
+            <span class="button-text">Display total before taxes</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="propertyListing">
+      <div class="property-listing-container">
+        <div class="left-pane">
+          <span style="margin: 40px; font-weight: 600"
+            >Over 1,000 places in San Francisco
+          </span>
+
+          <div id="propertyGrid" class="property-grid" role="list"></div>
+        </div>
+
+        <div id="map" class="right-pane"></div>
+
+        <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin="anonymous"
+        ></script>
+
+        <script>
+          var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+          }).addTo(mymap);
+
+          // Add a marker at a specific location
+          L.marker([51.5, -0.09]).addTo(mymap).bindPopup('A sample marker!');
+        </script>
+      </div>
+
+      <script>
+        const propertyData = [
+          {
+            name: 'Luxury Villa',
+            distance: '10 km to Beach',
+            bookingInfo: '7 nights 15-22 Apr',
+            price: '$2,500',
+            rating: '4.9',
+          },
+          {
+            name: 'City Apartment',
+            distance: '2 km to Downtown',
+            bookingInfo: '3 nights 8-11 May',
+            price: '$800',
+            rating: '4.7',
+          },
+          {
+            name: 'Mountain Cabin',
+            distance: '20 km to Trail',
+            bookingInfo: '4 nights 5-9 Jun',
+            price: '$1,200',
+            rating: '4.8',
+          },
+          {
+            name: 'Seaside Bungalow',
+            distance: '15 km to Coast',
+            bookingInfo: '6 nights 12-18 Jul',
+            price: '$1,800',
+            rating: '4.6',
+          },
+          {
+            name: 'Urban Loft',
+            distance: '5 km to City Center',
+            bookingInfo: '2 nights 20-21 Aug',
+            price: '$600',
+            rating: '4.5',
+          },
+          {
+            name: 'Countryside Retreat',
+            distance: '25 km to Nature Reserve',
+            bookingInfo: '5 nights 1-5 Sep',
+            price: '$2,000',
+            rating: '4.9',
+          },
+          {
+            name: 'Beachfront Paradise',
+            distance: '8 km to Sandy Shore',
+            bookingInfo: '7 nights 10-17 Oct',
+            price: '$3,000',
+            rating: '4.7',
+          },
+          {
+            name: 'Rural Hideaway',
+            distance: '30 km to Vineyard',
+            bookingInfo: '4 nights 15-19 Nov',
+            price: '$1,500',
+            rating: '4.8',
+          },
+          {
+            name: 'Skyline Penthouse',
+            distance: '1 km to City Skyline',
+            bookingInfo: '3 nights 5-8 Dec',
+            price: '$1,000',
+            rating: '4.6',
+          },
+          {
+            name: 'Lakeview Cottage',
+            distance: '12 km to Lakeshore',
+            bookingInfo: '6 nights 18-24 Jan',
+            price: '$1,700',
+            rating: '4.9',
+          },
+          {
+            name: 'Historic Manor',
+            distance: '18 km to Historic Sites',
+            bookingInfo: '5 nights 8-13 Feb',
+            price: '$2,300',
+            rating: '4.7',
+          },
+          {
+            name: 'Ski Chalet',
+            distance: '22 km to Ski Resort',
+            bookingInfo: '4 nights 21-25 Mar',
+            price: '$1,900',
+            rating: '4.8',
+          },
+          {
+            name: 'Desert Oasis',
+            distance: '30 km to Sand Dunes',
+            bookingInfo: '7 nights 12-19 Apr',
+            price: '$2,800',
+            rating: '4.6',
+          },
+          {
+            name: 'Garden Cottage',
+            distance: '5 km to Botanical Garden',
+            bookingInfo: '3 nights 8-11 May',
+            price: '$750',
+            rating: '4.5',
+          },
+          {
+            name: 'Tropical Retreat',
+            distance: '12 km to Rainforest',
+            bookingInfo: '6 nights 15-21 Jun',
+            price: '$2,100',
+            rating: '4.9',
+          },
+          {
+            name: 'Modern Condo',
+            distance: '3 km to Shopping District',
+            bookingInfo: '2 nights 10-12 Jul',
+            price: '$500',
+            rating: '4.7',
+          },
+          {
+            name: 'Riverfront Cabin',
+            distance: '25 km to River',
+            bookingInfo: '5 nights 18-22 Aug',
+            price: '$1,600',
+            rating: '4.8',
+          },
+          {
+            name: 'Eco-Friendly Lodge',
+            distance: '15 km to Eco Park',
+            bookingInfo: '4 nights 5-9 Sep',
+            price: '$1,300',
+            rating: '4.6',
+          },
+          {
+            name: 'Downtown Loft',
+            distance: '1 km to Cultural District',
+            bookingInfo: '7 nights 12-19 Oct',
+            price: '$2,200',
+            rating: '4.9',
+          },
+          {
+            name: 'Serenity Cottage',
+            distance: '10 km to Peaceful Lake',
+            bookingInfo: '6 nights 8-14 Nov',
+            price: '$1,900',
+            rating: '4.7',
+          },
+          {
+            name: 'Hillside Villa',
+            distance: '18 km to Hill Station',
+            bookingInfo: '3 nights 20-23 Dec',
+            price: '$1,100',
+            rating: '4.8',
+          },
+          {
+            name: 'Riverside Retreat',
+            distance: '22 km to Riverside',
+            bookingInfo: '5 nights 5-9 Jan',
+            price: '$1,400',
+            rating: '4.6',
+          },
+          {
+            name: 'Mansion on the Hill',
+            distance: '30 km to Scenic Overlook',
+            bookingInfo: '7 nights 15-22 Feb',
+            price: '$2,800',
+            rating: '4.9',
+          },
+          {
+            name: 'Quaint Cottage',
+            distance: '8 km to Quaint Village',
+            bookingInfo: '4 nights 8-12 Mar',
+            price: '$1,200',
+            rating: '4.7',
+          },
+          {
+            name: 'Golf Course Villa',
+            distance: '12 km to Golf Course',
+            bookingInfo: '6 nights 18-24 Apr',
+            price: '$2,000',
+            rating: '4.8',
+          },
+          {
+            name: 'Sunny Beach House',
+            distance: '5 km to Sunny Beach',
+            bookingInfo: '3 nights 8-11 May',
+            price: '$700',
+            rating: '4.6',
+          },
+          {
+            name: 'Elegant Townhouse',
+            distance: '15 km to Town Center',
+            bookingInfo: '5 nights 15-19 Jun',
+            price: '$1,500',
+            rating: '4.9',
+          },
+          {
+            name: 'Tranquil Cabin',
+            distance: '20 km to Tranquil Lake',
+            bookingInfo: '4 nights 5-9 Jul',
+            price: '$1,100',
+            rating: '4.7',
+          },
+          {
+            name: 'Lakeside Lodge',
+            distance: '25 km to Lakeside',
+            bookingInfo: '7 nights 18-25 Aug',
+            price: '$2,300',
+            rating: '4.8',
+          },
+          {
+            name: 'Skyview Penthouse',
+            distance: '1 km to Skyview Point',
+            bookingInfo: '6 nights 10-16 Sep',
+            price: '$2,500',
+            rating: '4.6',
+          },
+        ];
+
+        const propertyGrid = document.getElementById('propertyGrid');
+
+        propertyData.forEach((property) => {
+          const card = document.createElement('div');
+          card.classList.add('property-card');
+          card.setAttribute('role', 'listitem');
+
+          card.innerHTML = `
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="${property.name} Image">
+        </div>
+
+        <div class="card-content">
+          <div class="location-info">
+            <span class="location-name">${property.name}</span>
+            <span class="distance">${property.distance}</span>
+            <span class="booking-info">${property.bookingInfo}</span>
+            <span class="price">${property.price}</span>
+          </div>
+          <span class="rating">${property.rating}</span>
+        </div>
+      `;
+
+          propertyGrid.appendChild(card);
+        });
+      </script>
+    </section>
+  </body>
+</html>

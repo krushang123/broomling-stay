@@ -10,6 +10,7 @@
   z-index: 1100;
   top: 80px;
   background-color: white;
+  border-bottom: 1px solid #dddddd;
 }
 
 .filter-options {
@@ -117,6 +118,27 @@
   font-weight: 600;
 }
 
+.property-listing-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.left-pane {
+  width: 100%;
+  position: relative;
+}
+
+.right-pane {
+  display: none;
+  width: 35%;
+  height: 100vh;
+  position: sticky;
+  z-index: 1100;
+  right: 0;
+  top: 0;
+}
+
 @media (min-width: 480px) {
   .filters {
     width: 100%;
@@ -149,6 +171,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0 40px;
   }
+
+  .left-pane {
+    width: 100%;
+  }
+
+  .right-pane {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -163,8 +193,16 @@
 
   .property-grid {
     width: 100%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0 40px;
+  }
+
+  .left-pane {
+    width: 65%;
+  }
+
+  .right-pane {
+    display: flex;
   }
 }
 
@@ -176,18 +214,13 @@
 
   .property-grid {
     width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 0 40px;
   }
 }
 
 @media (min-width: 1536px) {
-  .filters {
-    width: 1600px;
-  }
-
   .property-grid {
-    width: 1600px;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
