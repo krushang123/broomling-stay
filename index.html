@@ -17,29 +17,51 @@
 
   <body>
     <header role="banner">
-      <div id="header-container" class="header-container">
+      <div class="header-container">
         <h1>
-          <a href="index.html" title="Go to Broomling Stay homepage"
-            >Broomling Stay</a
-          >
+          <a href="index.html" title="Go to Broomling Stay homepage">
+            Broomling Stay
+          </a>
         </h1>
 
-        <div class="nav-searchbar" role="search">
-          <p class="nav-option">Anywhere</p>
-
+        <div class="search-bar" role="search">
+          <p class="search-option">Anywhere</p>
           <div class="divider" role="presentation"></div>
-
-          <p class="nav-option">Any week</p>
-
+          <p class="search-option">Any week</p>
           <div class="divider" role="presentation"></div>
+          <p class="search-option">Add guests</p>
 
-          <p class="nav-option">Add guests</p>
+          <div class="search-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 12px;
+                width: 12px;
+                stroke: currentcolor;
+                stroke-width: 5.33333;
+                overflow: visible;
+              "
+            >
+              <path
+                fill="none"
+                d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"
+              ></path>
+            </svg>
+          </div>
         </div>
 
-        <nav id="navbar" role="navigation">
-          <div id="navbar-text">Broomling your home</div>
-
-          <button id="signup-button" aria-label="Sign up for Broomling Stay">
+        <nav class="navbar" role="navigation">
+          <div class="navbar-text">Broomling your home</div>
+          <button
+            class="sign-up-button"
+            aria-label="Sign up for Broomling Stay"
+          >
             Sign up
           </button>
         </nav>
@@ -48,96 +70,90 @@
 
     <section id="propertySection">
       <div class="filters">
-        <div style="width: 80%; display: flex">
-          <div class="filter-button">
+        <div class="filter-options">
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg"
-              alt=""
+              alt="National parks"
               width="24"
               height="24"
             />
-            <small class="small-text">National parks</small>
+            <small class="filter-label">National parks</small>
           </div>
-          <div class="filter-button">
+
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
-              alt=""
+              alt="Lakefront"
               width="24"
               height="24"
             />
-            <small class="small-text"> Lakefront</small>
+            <small class="filter-label">Lakefront</small>
           </div>
-          <div class="filter-button">
+
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg"
-              alt=""
+              alt="Iconic cities"
               width="24"
               height="24"
             />
-            <small class="small-text">Iconic cities</small>
+            <small class="filter-label">Iconic cities</small>
           </div>
 
-          <div class="filter-button">
+          <div class="filter-item">
             <img
-              class="icon"
               src="	https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg"
-              alt=""
+              alt="Castles"
               width="24"
               height="24"
             />
-            <small class="small-text">Castles</small>
+            <small class="filter-label">Castles</small>
           </div>
 
-          <div class="filter-button">
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg"
-              alt=""
+              alt="Countryside"
               width="24"
               height="24"
             />
-            <small class="small-text"> Countryside</small>
+            <small class="filter-label">Countryside</small>
           </div>
 
-          <div class="filter-button">
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
-              alt=""
+              alt="Golfing"
               width="24"
               height="24"
             />
-            <small class="small-text"> Golfing </small>
+            <small class="filter-label">Golfing</small>
           </div>
 
-          <div class="filter-button">
+          <div class="filter-item">
             <img
-              class="icon"
               src="	https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg"
-              alt=""
+              alt="Mansions"
               width="24"
               height="24"
             />
-            <small class="small-text"> Mansions </small>
+            <small class="filter-label">Mansions</small>
           </div>
 
-          <div class="filter-button">
+          <div class="filter-item">
             <img
-              class="icon"
               src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg"
-              alt=""
+              alt="Play"
               width="24"
               height="24"
             />
-            <small class="small-text"> Play </small>
+            <small class="filter-label">Play</small>
           </div>
         </div>
 
-        <div style="display: flex">
-          <button class="filter-button2">
+        <div class="filter-actions">
+          <button class="filter-action-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -159,21 +175,16 @@
                 d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"
               ></path>
             </svg>
-            <span class="text">Filters</span>
+            <span class="button-text">Filters</span>
           </button>
 
-          <button class="filter-button2" style="margin-left: 10px">
-            <span class="text">Display total before taxes</span>
+          <button class="filter-action-button" style="margin-left: 10px">
+            <span class="button-text">Display total before taxes</span>
           </button>
         </div>
       </div>
 
-      <div
-        id="propertyGrid"
-        class="property-grid"
-        role="list"
-        aria-labelledby="propertySection"
-      ></div>
+      <div id="propertyGrid" class="property-grid" role="list"></div>
     </section>
 
     <script>
