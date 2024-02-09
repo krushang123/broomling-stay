@@ -183,6 +183,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 24px 0;
+  border-bottom: 1px solid rgb(221, 221, 221);
 }
 
 .customer-profile {
@@ -223,4 +224,20 @@
 
 .review-text {
   font-size: 1rem;
+}
+
+.location-container {
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.location-container h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  padding-bottom: 24px;
+}
+
+.location-map {
+  height: 480px;
 }
