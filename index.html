@@ -47,9 +47,130 @@
     </header>
 
     <section id="propertySection">
+      <div class="filters">
+        <div style="width: 80%; display: flex">
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text">National parks</small>
+          </div>
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text"> Lakefront</small>
+          </div>
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text">Iconic cities</small>
+          </div>
+
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="	https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text">Castles</small>
+          </div>
+
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text"> Countryside</small>
+          </div>
+
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text"> Golfing </small>
+          </div>
+
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="	https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text"> Mansions </small>
+          </div>
+
+          <div class="filter-button">
+            <img
+              class="icon"
+              src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg"
+              alt=""
+              width="24"
+              height="24"
+            />
+            <small class="small-text"> Play </small>
+          </div>
+        </div>
+
+        <div style="display: flex">
+          <button class="filter-button2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 16px;
+                width: 16px;
+                stroke: currentcolor;
+                stroke-width: 3;
+                overflow: visible;
+              "
+            >
+              <path
+                fill="none"
+                d="M7 16H3m26 0H15M29 6h-4m-8 0H3m26 20h-4M7 16a4 4 0 1 0 8 0 4 4 0 0 0-8 0zM17 6a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 20a4 4 0 1 0 8 0 4 4 0 0 0-8 0zm0 0H3"
+              ></path>
+            </svg>
+            <span class="text">Filters</span>
+          </button>
+
+          <button class="filter-button2" style="margin-left: 10px">
+            <span class="text">Display total before taxes</span>
+          </button>
+        </div>
+      </div>
+
       <div
-        class="property-grid"
         id="propertyGrid"
+        class="property-grid"
         role="list"
         aria-labelledby="propertySection"
       ></div>
@@ -277,7 +398,10 @@
         card.setAttribute('role', 'listitem');
 
         card.innerHTML = `
-        <div class="card-image"></div>
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="${property.name} Image">
+        </div>
+
         <div class="card-content">
           <div class="location-info">
             <span class="location-name">${property.name}</span>
