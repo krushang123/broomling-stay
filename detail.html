@@ -328,6 +328,168 @@
                 </div>
               </div>
             </div>
+
+            <div class="customer-review-container" id="reviewsContainer"></div>
+
+            <script>
+              const customerReviews = [
+                {
+                  name: 'John Doe',
+                  location: 'United States',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 5,
+                  date: 'January 2024',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu nec justo congue cursus.',
+                },
+                {
+                  name: 'Alice Smith',
+                  location: 'Canada',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 4,
+                  date: 'February 2024',
+                  text: 'Nullam nec fermentum metus, vel scelerisque odio. Suspendisse sit amet urna vitae mauris venenatis tempor.',
+                },
+                {
+                  name: 'Bob Johnson',
+                  location: 'United Kingdom',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 3,
+                  date: 'March 2023',
+                  text: 'Vivamus tincidunt est eget nisl bibendum, nec congue purus posuere. Sed non augue vitae turpis tristique accumsan.',
+                },
+                {
+                  name: 'Eva Martinez',
+                  location: 'Spain',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 5,
+                  date: 'April 2023',
+                  text: 'Phasellus tristique justo nec urna commodo, at cursus orci bibendum. Proin nec mauris sit amet lectus posuere dictum.',
+                },
+                {
+                  name: 'Michael Kim',
+                  location: 'South Korea',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 4,
+                  date: 'May 2023',
+                  text: 'Cras vel metus nec orci vulputate bibendum. Nullam eget lacus justo. Fusce non dictum lacus, nec pellentesque nisi.',
+                },
+                {
+                  name: 'Sophie Chen',
+                  location: 'China',
+                  profilePicture: 'https://via.placeholder.com/50',
+                  rating: 5,
+                  date: 'June 2023',
+                  text: 'Maecenas varius lacus ac sem euismod efficitur. Sed lacinia, enim id sollicitudin egestas, elit sem vestibulum turpis.',
+                },
+              ];
+
+              function renderReviews() {
+                const reviewsContainer =
+                  document.getElementById('reviewsContainer');
+
+                customerReviews.forEach((review) => {
+                  const reviewElement = document.createElement('div');
+                  reviewElement.classList.add('customer-review');
+
+                  reviewElement.innerHTML = `
+                    <div class="customer-profile">
+                      <div class="profile-picture">
+                        <img src="${review.profilePicture}" alt="profile-picture" />
+                      </div>
+                        
+                      <div class="customer-info">
+                        <p class="customer-name">${review.name}</p>
+                        <p class="customer-experience">${review.location}</p>
+                      </div>
+                    </div>
+
+                    <div class="review-details">
+                      <div class="customer-rating">
+                        <div class="star-rating">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 9px; width: 9px; fill: var(--f-k-smk-x)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
+                            ></path>
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 9px; width: 9px; fill: var(--f-k-smk-x)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
+                            ></path>
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 9px; width: 9px; fill: var(--f-k-smk-x)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
+                            ></path>
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 9px; width: 9px; fill: var(--f-k-smk-x)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
+                            ></path>
+                          </svg>
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 9px; width: 9px; fill: var(--f-k-smk-x)"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p class="review-divider">·</p>
+                        <p class="review-date">${review.date}</p>
+                      </div>
+
+                      <p class="review-text">${review.text}</p>
+                    </div>
+                  `;
+
+                  reviewsContainer.appendChild(reviewElement);
+                });
+              }
+
+              renderReviews();
+            </script>
           </div>
 
           <div

@@ -177,3 +177,50 @@
 .amenity span {
   margin-left: 14px;
 }
+
+.customer-review-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.customer-profile {
+  display: flex;
+  align-items: center;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.customer-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.customer-experience {
+  color: #717171;
+}
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.star-rating,
+.customer-rating {
+  display: flex;
+  align-items: center;
+}
+
+.review-divider,
+.review-date {
+  margin-left: 10px;
+}
+
+.review-text {
+  font-size: 1rem;
+}
