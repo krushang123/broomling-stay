@@ -1,20 +1,20 @@
 .property-detail-container {
-  width: 1600px;
+  width: 100%;
   margin: auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .property-details-container {
   display: flex;
+  flex-direction: column;
 }
 
 .property-details-left {
-  width: 70%;
+  width: 100%;
 }
 
 .property-details-right {
-  width: 30%;
-  margin-left: 90px;
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 32px 0;
@@ -196,7 +196,7 @@
 
 .customer-review-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 24px 0;
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -259,7 +259,7 @@
 }
 
 .fare-summary-container {
-  width: 80%;
+  width: 100%;
   height: min-content;
   border: 1px solid rgb(221, 221, 221);
   padding: 24px;
@@ -372,4 +372,48 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (min-width: 480px) {
+  .property-detail-container {
+    padding: 0 40px;
+  }
+
+  .property-details-container {
+    flex-direction: row;
+  }
+
+  .property-details-left {
+    width: 65%;
+  }
+
+  .property-details-right {
+    width: 35%;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .property-details-left {
+    width: 70%;
+  }
+
+  .property-details-right {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1280px) {
+  .customer-review-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1536px) {
+  .property-detail-container {
+    width: 1600px;
+  }
 }
