@@ -1,5 +1,4 @@
 .banner {
-  /* max-width: 1600px; */
   width: 100%;
   margin: auto;
   padding: 0 20px;
@@ -22,7 +21,6 @@
 
 .payment-title {
   margin-left: 10px;
-  /* font-size: 2rem; */
   font-size: 1.125rem;
 }
 
@@ -52,7 +50,6 @@
 .left-section {
   display: flex;
   flex-direction: column;
-  /* width: 50%; */
   width: 100%;
 }
 
@@ -70,10 +67,8 @@
 .right-section {
   display: flex;
   flex-direction: column;
-  /* width: 50%; */
   width: 100%;
   margin-bottom: 40px;
-  /* margin-left: 40px; */
 }
 
 .trip-info {
