@@ -90,6 +90,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  align-items: flex-start;
 }
 
 .location-info {
@@ -113,8 +114,14 @@
   color: black;
 }
 
+.property-rating {
+  display: flex;
+  align-items: center;
+}
+
 .rating {
   font-weight: 600;
+  margin-left: 4px;
 }
 
 @media (min-width: 480px) {
