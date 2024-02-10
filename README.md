@@ -2,7 +2,7 @@
 
 ## Overview
 
-Thank you for considering my submission for the Broomling Stay project. This document provides an overview of the project, instructions for setup, and insights into the design and development process.
+Thank you for exploring the Broomling Stay project! This section provides a concise overview of the project, along with essential information for setup and insights into the design and development process.
 
 ## Project Description
 
