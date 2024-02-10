@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /
+
+Sitemap: https://krushang123.github.io/broomling-stay/sitemap.xml
