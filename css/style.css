@@ -6,7 +6,8 @@
 
 html,
 body {
-  font-family: 'Inter, sans-serif';
+  font-family: 'Circular', -apple-system, 'BlinkMacSystemFont', 'Roboto',
+    'Helvetica Neue', sans-serif;
   line-height: 1.7em;
 }
 
