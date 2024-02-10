@@ -6,7 +6,7 @@ Thank you for exploring the Broomling Stay project! This section provides a conc
 
 ## Project Description
 
-Broomling Stay is a HTML/CSS website designed to replicate the user experience of Airbnb and includes essential pages for homepage, property listing, and property details.
+Broomling Stay is a HTML/CSS website designed to replicate the user experience of Airbnb and includes essential pages for homepage, property listing, property details and booking.
 
 ## Table of Contents
 
@@ -39,6 +39,7 @@ Broomling Stay is a HTML/CSS website designed to replicate the user experience o
 - `index.html`: Homepage of the Broomling Stay project.
 - `property-listing.html`: Page displaying property listing.
 - `property-detail.html`: Page showing details of a specific property.
+- `booking.html`: Page for booking a specific property.
 - `README.md`: Project documentation containing setup instructions and information.
 
 # Live Demo
